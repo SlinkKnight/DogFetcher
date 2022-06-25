@@ -10,11 +10,9 @@ print(r.json()['status'])
 hooks = open("hooks.txt", 'r')
 print(f"webhook file fond, all good for now {hooks}")
 
-hooks = hooks.read()
-
 payload = {
     'content': imagem
 }
-for hook in hooks:
+for hook in hooks.read():
     r=requests.post(hook, data=payload)
     print("message sent")
