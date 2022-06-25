@@ -1,9 +1,15 @@
 import requests 
 
-api="https://dog.ceo/api/breeds/image/random"
-r=requests.get(api)
-imagem=r.json()['message']
-payload={
+api = "https://dog.ceo/api/breeds/image/random"
+
+r = requests.get(api)
+
+imagem = r.json()['message']
+
+hooks = open("hooks.txt", 'r')
+
+payload = {
     'content': imagem
 }
-r=requests.post(open("hooks.txt", 'r'),data=payload)
+for hook in hooks
+    r=requests.post(hook, data=payload)
