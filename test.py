@@ -7,12 +7,14 @@ r = requests.get(api)
 imagem = r.json()['message']
 print(r.json()['status'])
 
-hooks = open("hooks.txt", 'r')
+f = open("hooks.txt", 'r')
 print(f"webhook file fond, all good for now {hooks}")
+
+hooks = f.read()
 
 payload = {
     'content': imagem
 }
-for hook in hooks.read():
+for hook in hooks:
     r=requests.post(hook, data=payload)
     print("message sent")
