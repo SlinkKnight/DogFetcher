@@ -5,9 +5,10 @@ api = "https://dog.ceo/api/breeds/image/random"
 r = requests.get(api)
 
 imagem = r.json()['message']
+print(r.json()['status'])
 
 hooks = open("hooks.txt", 'r')
-print("webhook file fond, all good for now")
+print(f"webhook file fond, all good for now {hooks}")
 
 payload = {
     'content': imagem
