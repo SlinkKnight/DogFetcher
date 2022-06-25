@@ -10,6 +10,8 @@ print(r.json()['status'])
 hooks = open("hooks.txt", 'r')
 print(f"webhook file fond, all good for now {hooks}")
 
+hooks = hooks.read()
+
 payload = {
     'content': imagem
 }
