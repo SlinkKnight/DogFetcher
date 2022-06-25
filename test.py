@@ -11,5 +11,5 @@ hooks = open("hooks.txt", 'r')
 payload = {
     'content': imagem
 }
-for hook in hooks
+for hook in hooks:
     r=requests.post(hook, data=payload)
