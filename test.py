@@ -14,3 +14,4 @@ payload = {
 }
 for hook in hooks:
     r=requests.post(hook, data=payload)
+    print("message sent")
