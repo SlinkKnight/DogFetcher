@@ -16,5 +16,5 @@ payload = {
     'content': imagem
 }
 for hook in hooks:
-    r=requests.post(hook, data=payload)
+    r=requests.post(url=hook, data=payload)
     print("message sent")
