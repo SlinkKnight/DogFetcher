@@ -8,9 +8,9 @@ imagem = r.json()['message']
 print(r.json()['status'])
 
 f = open("hooks.txt", 'r')
-print(f"webhook file fond, all good for now {hooks}")
 
 hooks = f.read()
+print(f"webhook file fond, all good for now {hooks}")
 
 payload = {
     'content': imagem
