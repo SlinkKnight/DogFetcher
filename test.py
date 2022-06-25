@@ -7,6 +7,7 @@ r = requests.get(api)
 imagem = r.json()['message']
 
 hooks = open("hooks.txt", 'r')
+print("webhook file fond, all good for now")
 
 payload = {
     'content': imagem
