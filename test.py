@@ -7,7 +7,7 @@ r = requests.get(api)
 imagem = r.json()['message']
 print(r.json()['status'])
 
-f = open("python-vicenzo/hooks.txt", 'r')
+f = open("hooks.txt", 'r')
  
 hooks = f.readlines()
 print(f"# webhook file found!, all good for now")
